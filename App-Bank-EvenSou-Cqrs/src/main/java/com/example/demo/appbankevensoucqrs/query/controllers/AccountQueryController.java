@@ -10,10 +10,7 @@ import org.axonframework.messaging.responsetypes.ResponseTypes;
 import org.axonframework.queryhandling.QueryGateway;
 import org.axonframework.queryhandling.SubscriptionQueryResult;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 
 import java.util.List;
@@ -22,6 +19,7 @@ import java.util.concurrent.CompletableFuture;
 
 @RestController
 @RequestMapping("/query/accounts")
+@CrossOrigin("*")
 public class AccountQueryController {
 
     private QueryGateway queryGateway;
